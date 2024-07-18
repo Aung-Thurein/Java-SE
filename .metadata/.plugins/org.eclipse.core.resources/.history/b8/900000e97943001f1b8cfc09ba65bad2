@@ -1,0 +1,10 @@
+package com.jdc.online.problem;
+
+import java.util.Collection;
+import java.util.Collections;
+
+public class BalanceChecker1 {
+	
+	var stack = Collections.asLifoQueue(Character);
+
+}

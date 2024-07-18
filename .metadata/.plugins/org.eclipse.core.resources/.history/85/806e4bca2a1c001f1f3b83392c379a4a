@@ -1,0 +1,11 @@
+package com.jdc.online.demo;
+
+public class Parent {
+	
+	public void doSomething() {
+		System.out.println("Do something from parent");
+		
+		
+	}
+
+}

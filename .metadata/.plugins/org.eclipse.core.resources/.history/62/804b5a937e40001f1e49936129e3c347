@@ -1,0 +1,69 @@
+package com.jdc.online.pos.features;
+
+import com.jdc.console.app.AbstractFeature;
+import com.jdc.console.app.UserInputs;
+import com.jdc.console.app.component.TableView;
+import com.jdc.console.app.component.TableViewData;
+import com.jdc.console.app.component.TableViewData.columnAlignment;
+import com.jdc.console.app.component.TableViewModelBase;
+import com.jdc.console.app.utils.FormatUtils;
+import com.jdc.online.pos.model.ProductModel;
+import com.jdc.online.pos.model.component.ProductModelAdaptor;
+import com.jdc.online.pos.model.output.Product;
+
+public class FeatureForSearchProduct extends AbstractFeature {
+
+	private ProductModel model;
+	
+	public FeatureForSearchProduct(int id) {
+		super(id, "Search Product");
+		// TODO Auto-generated constructor stub
+		model = ProductModel.getInstance();
+	}
+
+	
+	@Override
+	public void doBusiness() {
+
+		String name = UserInputs.readString("Search Name");
+		
+		Product[] products = model.search(name);
+	
+		TableViewData tableData = convert(products);
+		
+		//show result 
+		
+		TableViewModelBase adaptor = new TableViewModelBase(tableData);
+		
+		TableView table = new TableView(adaptor);
+		
+		table.draw();
+	
+	}
+
+
+	private TableViewData convert(Product[] products) {
+		String[] headers =new String[] {"Id", "Name", "Price" };
+		columnAlignment [] columns = new columnAlignment[] {columnAlignment.Left, columnAlignment.Left, columnAlignment.Right};
+		
+		
+		String[][] contents = new String[products.length][];
+		
+		for(int i = 0; i < contents.length; i++) {
+			Product product = products[i];
+			
+			contents[i] = new String[3];
+			
+			contents[i][0] = String.valueOf(product.id());
+			contents[i][1] = product.name();
+			contents[i][2] = FormatUtils.DF.format(product.price());
+			
+			
+		}
+		return new TableViewData(columns, headers, contents);	
+		
+	}
+	
+	
+
+}

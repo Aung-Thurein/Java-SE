@@ -1,0 +1,9 @@
+package com.jdc.online.pos.model;
+
+public interface SaleModel {
+
+ public static SaleModel getInstance() {
+	 return SaleModelImpl.getInstance();
+ }
+
+}

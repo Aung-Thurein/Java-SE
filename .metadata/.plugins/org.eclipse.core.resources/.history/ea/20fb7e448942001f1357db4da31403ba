@@ -1,0 +1,34 @@
+package com.jdc.online.pos.features;
+
+import com.jdc.console.app.AbstractFeature;
+
+public class FeatureForAddSale extends AbstractFeature{
+
+	public FeatureForAddSale(int id) {
+		super(id, "Create Sale");
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void doBusiness() {
+
+		//Show Product List 
+	do {
+		
+		//Get Product ID
+		
+		//Get Quantity
+		
+		//Show total for Items
+	}
+	while(isEmpytInCart());
+	
+		//register Sale History 
+	}
+
+	private boolean isEmpytInCart() {
+		
+		return false;
+	}
+
+}

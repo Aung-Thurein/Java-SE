@@ -1,0 +1,32 @@
+package com.jdc.online.pos.utils;
+
+import com.jdc.console.app.component.TableView;
+import com.jdc.console.app.component.TableViewData;
+import com.jdc.console.app.component.TableViewModelBase;
+import com.jdc.console.app.component.TableViewData.columnAlignment;
+import com.jdc.online.pos.model.input.SaleItem;
+import com.jdc.online.pos.model.output.Product;
+
+public class SaleItemTableHelper {
+
+	public static TableView getTableView(SaleItem[] sales) {
+	
+		String[] headers =new String[] {"No", "Product", "Unit Price", "Quantity", "Total" };
+		columnAlignment [] columns = new columnAlignment[] {columnAlignment.Left, columnAlignment.Left, columnAlignment.Right, columnAlignment.Right, columnAlignment.Right };
+		
+		String[][] contents = new String[sales.length][];
+	
+		for (int i = 0; i < sales.length; i++) {
+			Product product = sales[i];
+			
+			contents[i] = new String[3];
+			
+			
+		}
+		TableViewData data =new TableViewData(columns, headers, contents);	
+		
+		
+		return new TableView(new TableViewModelBase(data));
+		
+	}
+}

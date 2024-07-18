@@ -1,0 +1,10 @@
+package com.jdc.online.pos.utils;
+
+import com.jdc.console.app.component.TableView;
+
+public class SaleHistoryTableHelper {
+
+	public static TableView getTableView(Sale[] sale) {
+		
+	}
+}

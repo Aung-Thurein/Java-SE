@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;commons-console/src/main/java&apos;&#x0A;- Original project: &apos;console-app&apos;&#x0A;- Destination element: &apos;commons-console/src/main/java&apos;&#x0A;- Original elements:&#x0A;     console-app/src/main/java/com.jdc.console.app.component&#x0A;     console-app/src/main/java/com.jdc.console.app" description="Copy packages" destination="=commons-console/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jdc.console.app.component" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jdc.console.app" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1719924095987" version="1.0"/>
+</session>

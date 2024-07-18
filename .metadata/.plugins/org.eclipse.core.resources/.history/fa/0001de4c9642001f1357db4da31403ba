@@ -1,0 +1,12 @@
+package com.jdc.online.pos.model;
+
+public class SaleModelImpl implements SaleModel {
+
+	private static SaleModel instance;
+	
+	public static SaleModel getInstance() {
+		instance = new SaleModelImpl();
+		return instance ;
+	}
+
+}

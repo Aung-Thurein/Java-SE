@@ -1,0 +1,17 @@
+package com.jdc.online.pos.utils;
+
+import com.jdc.console.app.component.TableView;
+import com.jdc.console.app.component.TableViewData.columnAlignment;
+import com.jdc.online.pos.model.input.SaleItem;
+
+public class SaleItemTableHelper {
+
+	public static TableView getTableView(SaleItem[] sales) {
+	
+		String[] headers =new String[] {"No", "Product", "Unit Price", "Quantity", "Total" };
+		columnAlignment [] columns = new columnAlignment[] {columnAlignment.Left, columnAlignment.Left, columnAlignment.Right};
+		
+		return null;
+		
+	}
+}

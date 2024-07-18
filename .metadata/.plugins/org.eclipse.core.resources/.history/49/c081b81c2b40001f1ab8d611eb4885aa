@@ -1,0 +1,52 @@
+package com.jdc.online.pos.model.component;
+
+import com.jdc.console.app.component.TabelViewModel;
+import com.jdc.online.pos.model.output.Sale;
+
+public class SaleModelAdaptor implements TabelViewModel {
+	private Sale sales;
+	private String rowFormat;
+	private static String [] headers = {"Id","SaleAt","Items","Total"};
+	private static int [] columnSizes = {};
+	
+	static {
+		
+		for (int i = 0; i < headers.length; i++) {
+			columnSizes[i] =  headers[i].length() + 3;
+		}
+	}
+	
+	public SaleModelAdaptor(Sale sales) {
+		super();
+		this.sales = sales;
+		
+		for(Sale sale : sales) {
+			if(String.valueOf(sale.id()).length() + 3 > columnSizes[0]) {
+				
+			}
+		}
+	}
+
+	@Override
+	public int maxSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String header() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String[] rows() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	private String setRowFormat() {
+		return"";
+	}
+
+}

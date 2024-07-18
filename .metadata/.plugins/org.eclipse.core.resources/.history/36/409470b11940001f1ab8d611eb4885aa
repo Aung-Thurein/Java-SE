@@ -1,0 +1,10 @@
+package com.jdc.online.pos.model.input;
+
+import com.jdc.online.pos.model.output.Product;
+
+public record saleItem(
+		Product product,
+		int count,
+		int total) {
+
+}

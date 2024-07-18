@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.jdc.students.model.StudentModelTest
+-------------------------------------------------------------------------------
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s -- in com.jdc.students.model.StudentModelTest

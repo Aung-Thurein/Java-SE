@@ -1,0 +1,60 @@
+package com.jdc.online.problem;
+
+import java.util.Stack;
+
+public class BalanceChecker {
+
+	Stack<Character> stack = new Stack<>();
+	private char scannedChar;
+
+
+	public boolean isBalance(String value) {
+		for (int i = 0; i < value.length(); i++) {
+		  scannedChar = value.charAt(i);
+		
+		 if(isOpening(scannedChar)) {
+			 stack.push(scannedChar);
+		 }
+		 
+		  if(isClosing(scannedChar)) {
+			  
+			 if(!stack.isEmpty()) {
+					char pop =  stack.pop();
+					if(pop == scannedChar) {
+						return true;
+					}
+				 
+			 }
+		 }
+		 
+		if(isOperand(scannedChar)) {
+			return false;
+		}
+		 
+		}
+		return false;
+	}
+
+	public boolean isOperand(char value) {
+		return Character.isLetter(value);
+	}
+
+	public boolean isOpening(char value) {
+		return value == '(' || value == '[' || value == '{';
+	}
+
+	public boolean isClosing(char value) {
+		return value == ')' || value == ']' || value == '}';
+	}
+	
+	public boolean isOpenBracket(char value1,char value2) {
+		return value1 == '(' || value2 == ')';
+	}
+
+	public boolean isCurlyBracket(char value1, char value2) {
+		return value1 == '{' || value2 == '}';
+	}
+	public boolean isDBracket(char value1, char value2) {
+		return value1 == '[' || value2 == '[';
+	}
+}

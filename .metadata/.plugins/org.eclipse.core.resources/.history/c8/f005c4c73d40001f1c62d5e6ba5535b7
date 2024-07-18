@@ -1,0 +1,13 @@
+package com.jdc.online.validator;
+
+import lombok.Data;
+
+@Data
+public class FieldError {
+
+	private  String field;
+	private final String message;
+	
+	
+	
+}

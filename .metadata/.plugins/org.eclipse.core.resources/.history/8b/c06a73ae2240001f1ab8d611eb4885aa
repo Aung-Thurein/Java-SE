@@ -1,0 +1,65 @@
+package com.jdc.online.pos.model.component;
+
+import java.text.DecimalFormat;
+
+import com.jdc.console.app.component.TabelViewModel;
+import com.jdc.online.pos.model.input.SaleItem;
+import static com.jdc.console.app.utils.FormatUtils.*;
+
+public class SaleItemModelAdaptor implements TabelViewModel{
+
+	private SaleItem[] items;
+
+	
+	public SaleItemModelAdaptor(SaleItem[] items) {
+		super();
+		this.items = this.items;
+		for(SaleItem item : items) {
+			if(item.product().name().length() + 3 > LengthName ) {
+				LengthName = item.product().name().length() + 3;
+			}
+			if(DF.format(item.product().price()).length() +3 > LengthPrice) {
+				LengthPrice = DF.format(item.product().price()).length() +3 ;
+			}
+			
+			if (DF.format(item.count()).length() + 3 > LengthQty){
+				LengthQty = DF.format(item.count()).length() + 3 ; 
+			}
+			
+			if(DF.format(item.getTotal()).length() + 3 > LengthTotal ){
+				LengthTotal = DF.format(item.getTotal()).length() + 3 ;
+			}
+		}
+		
+	}
+	
+	private static final String HEADER_NO = "No.";
+	private static final String HEADER_NAME = "Product";
+	private static final String HEADER_PRICE = "Price";
+	private static final String HEADER_QUANTITY = "Qty";
+	private static final String HEADER_TOTAL = "TOTAL";
+
+	private int LengthNo = HEADER_NO.length() + 3;
+	private int LengthName = HEADER_NAME.length() + 3;
+	private int LengthPrice = HEADER_PRICE.length() + 3;
+	private int LengthQty = HEADER_QUANTITY.length() + 3;
+	private int LengthTotal = HEADER_TOTAL.length() + 3;
+	
+	@Override
+	public int maxSize() {
+		return LengthNo + LengthName + LengthPrice + LengthQty + LengthTotal;
+	}
+
+	@Override
+	public String header() {
+
+		return null;
+	}
+
+	@Override
+	public String[] rows() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

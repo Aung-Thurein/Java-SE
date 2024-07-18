@@ -1,0 +1,21 @@
+package com.jdc.online.pos.model;
+
+import com.jdc.online.pos.model.input.SaleItem;
+import com.jdc.online.pos.model.output.Sale;
+
+public class s implements SaleModel {
+
+	private static SaleModel instance;
+	
+	public static SaleModel getInstance() {
+		instance = new SaleModelImpl();
+		return instance;
+	}
+
+	@Override
+	public Sale create(SaleItem[] cart) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
