@@ -1,5 +1,0 @@
-package com.jdc.console.app.component;
-
-public class TableViewModelBase {
-
-}

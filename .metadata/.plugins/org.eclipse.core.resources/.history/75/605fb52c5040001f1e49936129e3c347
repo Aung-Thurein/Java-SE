@@ -1,5 +1,0 @@
-package com.jdc.console.app.exceptions;
-
-public class InvalidComponentDataException {
-
-}

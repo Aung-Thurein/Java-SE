@@ -1,7 +1,0 @@
-package com.jdc.console.app.component;
-
-public abstract class TableViewModelBase implements TableViewModel {
-
-	
-	
-}
