@@ -5,6 +5,8 @@ import java.util.Arrays;
 import com.jdc.console.app.AbstractFeature;
 import com.jdc.console.app.UserInputs;
 import com.jdc.console.app.exceptions.BussinessException;
+import com.jdc.console.app.exceptions.ConsoleAppException;
+import com.jdc.console.app.exceptions.ValidationException;
 import com.jdc.console.app.utils.FormatUtils;
 import com.jdc.online.pos.model.ProductModel;
 import com.jdc.online.pos.model.SaleModel;
@@ -62,18 +64,35 @@ public class FeatureForAddSale extends AbstractFeature{
 		}
 	}
 	while(skipAsking || isEmpytInCart()); //false condition work
-	
-		if(cart.length > 0 ) {
-			//register Sale History 
-		Sale sale = SaleModel.getInstance().create(cart);
-		System.out.println("Sale History");
-		//Show sale Id
-		System.out.printf("%-10s : %s%n","Sale Id",sale.id());
-		//show Total Item
-		System.out.printf("%-10s : %s%n","Item Count",sale.getItemCount());
-		//show All total Amount
-		System.out.printf("%-10s : %s%n","All Total",sale.getAllTotal());
+		
+		try {
+			if(cart.length > 0 ) {
+				//register Sale History 
+			Sale sale = SaleModel.getInstance().create(cart);
+			System.out.println("Sale History");
+			//Show sale Id
+			System.out.printf("%-10s : %s%n","Sale Id",sale.id());
+			//show Total Item
+			System.out.printf("%-10s : %s%n","Item Count",sale.getItemCount());
+			//show All total Amount
+			System.out.printf("%-10s : %s%n","All Total",sale.getAllTotal());
+			}
+			
+		} catch (ConsoleAppException  | BussinessException e) {
+			System.out.printf("Error : %s%n%n",e.getMessage());
+			doBusiness();
 		}
+		catch(ValidationException e) {
+			System.out.println("Validation Errors");
+			
+			for(var message : e.getMessages())
+			{
+				System.out.println(message);
+			}
+			doBusiness();
+		}
+		
+	
 	}
 
 	private SaleItem[] addItem(SaleItem item, SaleItem[] cart) {

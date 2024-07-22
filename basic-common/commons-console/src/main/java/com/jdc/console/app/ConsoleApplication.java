@@ -16,30 +16,35 @@ public class ConsoleApplication {
 		public void launch() {
 			showMessage("Welcome to %s".formatted(appName));
 		
-			do {
+			try {
+				do {
+					
+					try {
+						
+						skipAsking = false;
+						var feature = getUserSelectedFeature();
+						
+						feature.showMenu();
+						System.out.println();
+					
+						feature.doBusiness();
+						System.out.println();
+						
+					} catch (ConsoleAppException e) {
+						System.out.printf("Error : %s%n%n", e.getMessage());
+						skipAsking = true;
+						
+				}
+			}	
 				
-				try {
-					
-					skipAsking = false;
-					var feature = getUserSelectedFeature();
-					
-					feature.showMenu();
-					System.out.println();
-				
-					feature.doBusiness();
-					System.out.println();
-					
-				} catch (ConsoleAppException e) {
-					System.out.printf("Error : %s%n%n", e.getMessage());
-					skipAsking = true;
-					
-			}
-		}	
+			while(skipAsking || askToDoAgain());
+				showMessage("See you Again!");
 			
-		while(skipAsking || askToDoAgain());
-			showMessage("See you Again!");
+
+			} catch (Exception e) {
+				System.out.printf("System Error : %s%n%n",e.getMessage());
+			}
 		}
-		
 	
 		private AbstractFeature getUserSelectedFeature() {
 			

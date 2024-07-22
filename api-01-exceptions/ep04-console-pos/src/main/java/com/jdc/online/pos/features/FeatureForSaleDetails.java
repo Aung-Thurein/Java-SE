@@ -40,6 +40,7 @@ public class FeatureForSaleDetails extends AbstractFeature {
 
 		} catch (BussinessException e) {
 			System.out.printf("Error : %s%n%n",e.getMessage());
+		
 			doBusiness();
 		}
 	}
