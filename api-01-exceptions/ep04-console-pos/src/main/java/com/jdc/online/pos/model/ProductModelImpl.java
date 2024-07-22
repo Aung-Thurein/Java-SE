@@ -2,6 +2,7 @@ package com.jdc.online.pos.model;
 
 import java.util.Arrays;
 
+import com.jdc.console.app.exceptions.BussinessException;
 import com.jdc.online.pos.model.input.ProductForm;
 import com.jdc.online.pos.model.output.Product;
 import com.jdc.online.validator.Validator;
@@ -18,7 +19,11 @@ public class ProductModelImpl extends AbstractModel implements ProductModel {
 	}
 	
 	public static ProductModel getInstance() {
-		instance = new ProductModelImpl();
+		if(instance == null)
+		{
+			instance = new ProductModelImpl();
+			
+		}
 		return instance;
 	}
 	
@@ -50,16 +55,22 @@ public class ProductModelImpl extends AbstractModel implements ProductModel {
 				result[result.length - 1] = product;
 
 			}
-
 		}
 		return result;
+	
 
 	}
 
 	@Override
 	public Product findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		for(Product product : data)
+		{
+			if(product.id() == id)
+			{
+				return product;
+			}
+		}
+		throw new BussinessException("Please Enter Valid Product Id");
 	}
 
 	

@@ -35,6 +35,8 @@ public class FeatureForAddSale extends AbstractFeature{
 		
 	do {
 		try {
+			
+			skipAsking = false;
 			System.out.println("Add Item");
 			//Get Product ID
 			int id = UserInputs.readInt(SIZE, "Proudct ID");
@@ -48,7 +50,8 @@ public class FeatureForAddSale extends AbstractFeature{
 			
 			//Add items to Cart
 			SaleItem item = new SaleItem(product, quantity);
-			addItem(item,cart);
+			cart = addItem(item,cart);
+			
 			
 			//Show total for Items
 			System.out.printf("%-10s : %s%n","Total",FormatUtils.DF.format(item.getTotal()));
@@ -58,7 +61,7 @@ public class FeatureForAddSale extends AbstractFeature{
 			skipAsking = true;
 		}
 	}
-	while(skipAsking || !isEmpytInCart()); //false condition work
+	while(skipAsking || isEmpytInCart()); //false condition work
 	
 		if(cart.length > 0 ) {
 			//register Sale History 
@@ -67,9 +70,9 @@ public class FeatureForAddSale extends AbstractFeature{
 		//Show sale Id
 		System.out.printf("%-10s : %s%n","Sale Id",sale.id());
 		//show Total Item
-		System.out.printf("%-10s : %s%n","",sale.getItemCount());
+		System.out.printf("%-10s : %s%n","Item Count",sale.getItemCount());
 		//show All total Amount
-		System.out.printf("%-10s : %s%n","",sale.getAllTotal());
+		System.out.printf("%-10s : %s%n","All Total",sale.getAllTotal());
 		}
 	}
 
@@ -82,7 +85,7 @@ public class FeatureForAddSale extends AbstractFeature{
 	private boolean isEmpytInCart() {
 		String result = UserInputs.readString("More Item(Y/Others)");
 		System.out.println();
-		return !"Y".equalsIgnoreCase(result);
+		return "Y".equalsIgnoreCase(result);
 	}
 
 }
