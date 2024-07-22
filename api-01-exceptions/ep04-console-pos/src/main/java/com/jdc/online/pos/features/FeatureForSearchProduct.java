@@ -29,7 +29,7 @@ public class FeatureForSearchProduct extends AbstractFeature {
 	
 		
 		//show result 
-		TableView table =  ProductTableHelper.getTableView(products);
+		TableView table = ProductTableHelper.getTableView(products);
 
 		table.draw();
 	

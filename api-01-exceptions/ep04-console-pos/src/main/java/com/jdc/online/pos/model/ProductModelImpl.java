@@ -1,21 +1,39 @@
 package com.jdc.online.pos.model;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Arrays;
 
 import com.jdc.console.app.exceptions.BussinessException;
 import com.jdc.online.pos.model.input.ProductForm;
 import com.jdc.online.pos.model.output.Product;
-import com.jdc.online.validator.Validator;
+import com.jdc.online.pos.model.storage.ProductStorage;
 
 public class ProductModelImpl extends AbstractModel implements ProductModel {
 
+	private static final String FILE_NAME = "products.obj";
 	private static ProductModel instance;
 	private static int id;
 
 	private Product[] data = {};
 	
 	private ProductModelImpl() {
+		//restore last Data
+		try (ObjectInputStream input = new ObjectInputStream(new FileInputStream(FILE_NAME))){
 		
+			Object result = input.readObject();
+			
+			if(result != null && result instanceof ProductStorage(int id, Product[] data))
+			{
+				ProductModelImpl.id = id;
+				this.data = data;
+				
+			}
+		} catch (Exception e) {
+		
+		}
 	}
 	
 	public static ProductModel getInstance() {
@@ -38,8 +56,16 @@ public class ProductModelImpl extends AbstractModel implements ProductModel {
 		
 		data = Arrays.copyOf(data, data.length + 1);
 		data[data.length - 1] = product;
-		
+	
+		//save storage
+		try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(FILE_NAME))){
+			
+			output.writeObject(new ProductStorage(id, data));
+		} catch (Exception e) {
+			//Nothing to do	
+		}
 		return product.id();
+		
 	}
 
 	@Override

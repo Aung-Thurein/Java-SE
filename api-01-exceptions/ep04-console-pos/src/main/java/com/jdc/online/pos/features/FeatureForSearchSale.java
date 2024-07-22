@@ -16,14 +16,20 @@ public class FeatureForSearchSale extends AbstractFeature{
 	@Override
 	public void doBusiness() {
 		//get Sale Date
-		String date = UserInputs.readString("Enter Date");
+	
+		try {
+			String date = UserInputs.readString("Enter Date");
 
-		
-		//Search form Model
-		Sale[] sale = SaleModel.getInstance().findByDate(date);
-		//Show Result
-		
-		SaleHistoryTableHelper.getTableView(sale).draw();
+			
+			//Search form Model
+			Sale[] sale = SaleModel.getInstance().findByDate(date);
+			//Show Result
+			
+			SaleHistoryTableHelper.getTableView(sale).draw();
+		}
+		catch (Exception e) {
+			System.out.printf("Error : %s%n%n",e.getMessage());
+			doBusiness();
+		}
 	}
-
 }

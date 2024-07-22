@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.jdc.console.app.component.TableViewData"/>
-    <fullyQualifiedTypeName name="com.jdc.students.model.StudentModelImpl"/>
-    <fullyQualifiedTypeName name="com.jdc.console.app.component.TableViewModelBase"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.utils.ProductTableHelper"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.params.provider.CsvSource"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.model.output.Product"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.model.input.ProductForm"/>
-    <fullyQualifiedTypeName name="com.jdc.console.app.exceptions.BussinessException"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.model.ProductModel"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.model.SaleModelImpl"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
-    <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="com.jdc.console.app.component.TableView"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.input.SaleItem"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.utils.SaleItemTableHelper"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="com.jdc.console.app.UserInputs"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.SaleModel"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.utils.SaleHistoryTableHelper"/>
@@ -26,7 +11,6 @@
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.sql.Array"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="com.jdc.online.problem.ComparableValue"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.params.ParameterizedTest"/>
@@ -52,12 +36,28 @@
     <fullyQualifiedTypeName name="java.util.function.UnaryOperator"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="com.jdc.console.app.component.TableViewData.columnAlignment"/>
-    <fullyQualifiedTypeName name="com.jdc.console.app.utils.FormatUtils"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.model.output.Sale"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.features.FeatureForAddProduct"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.features.FeatureForSearchProduct"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.features.FeatureForSaleDetails"/>
     <fullyQualifiedTypeName name="com.jdc.console.app.ConsoleApplication"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.features.FeatureForSearchSale"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.features.FeatureForAddSale"/>
+    <fullyQualifiedTypeName name="com.jdc.console.app.AbstractFeature"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="com.jdc.console.app.exceptions.BussinessException"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.jdc.online.pos.model.output.Sale"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.jdc.online.pos.model.output.Product"/>
+    <fullyQualifiedTypeName name="com.jdc.console.app.utils.FormatUtils"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="com.jdc.online.pos.model.storage.ProductStorage"/>
+    <fullyQualifiedTypeName name="com.jdc.online.pos.model.SaleModelImpl"/>
+    <fullyQualifiedTypeName name="java.io.OutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="com.jdc.online.pos.model.storage.SaleStorage"/>
+    <fullyQualifiedTypeName name="com.jdc.online.pos.model.ProductModelImpl"/>
 </qualifiedTypeNameHistroy>
