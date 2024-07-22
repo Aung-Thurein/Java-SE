@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.jdc.console.app.component.TableView"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.model.input.SaleItem"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.utils.SaleItemTableHelper"/>
-    <fullyQualifiedTypeName name="com.jdc.console.app.UserInputs"/>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.model.SaleModel"/>
-    <fullyQualifiedTypeName name="com.jdc.online.pos.utils.SaleHistoryTableHelper"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.sql.Array"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="com.jdc.online.problem.ComparableValue"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.params.ParameterizedTest"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.params.provider.MethodSource"/>
-    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.params.provider.Arguments"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Disabled"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
@@ -25,11 +10,9 @@
     <fullyQualifiedTypeName name="java.util.ArrayDeque"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-    <fullyQualifiedTypeName name="java.util.function.Consumer"/>
     <fullyQualifiedTypeName name="java.util.function.Predicate"/>
     <fullyQualifiedTypeName name="java.lang.foreign.Linker.Option"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.function.Function"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
@@ -44,13 +27,9 @@
     <fullyQualifiedTypeName name="com.jdc.online.pos.features.FeatureForAddSale"/>
     <fullyQualifiedTypeName name="com.jdc.console.app.AbstractFeature"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="com.jdc.console.app.exceptions.BussinessException"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.output.Sale"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.output.Product"/>
     <fullyQualifiedTypeName name="com.jdc.console.app.utils.FormatUtils"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.storage.ProductStorage"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.SaleModelImpl"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
@@ -60,4 +39,25 @@
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.storage.SaleStorage"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.ProductModelImpl"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.DateTimeAtCompleted"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeParseException"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="com.jdc.console.app.exceptions.BussinessException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.io.TempDir"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="java.nio.file.DirectoryStream.Filter"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.jdc.stream.domain.Product"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.nio.file.Path"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.util.function.Consumer"/>
 </qualifiedTypeNameHistroy>

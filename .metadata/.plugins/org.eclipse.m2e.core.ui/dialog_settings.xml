@@ -49,6 +49,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="api-05-streams"/>
 			<item value="api-04-lambda"/>
 			<item value="api-03-collections"/>
 			<item value="api-02-collections"/>
