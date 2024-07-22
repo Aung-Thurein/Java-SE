@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.jdc.console.app.exceptions.ValidationException"/>
-    <fullyQualifiedTypeName name="com.jdc.online.validator.annotation.MinLength"/>
-    <fullyQualifiedTypeName name="com.jdc.online.validator.annotation.NotBlank"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Order"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.AbstractModel"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.ProductModelImpl"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.component.ProductModelAdaptor"/>
@@ -30,9 +26,7 @@
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.SaleModelImpl"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
-    <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="com.jdc.console.app.component.TableView"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.model.input.SaleItem"/>
     <fullyQualifiedTypeName name="com.jdc.online.pos.utils.SaleItemTableHelper"/>
@@ -56,8 +50,14 @@
     <fullyQualifiedTypeName name="org.junit.jupiter.params.provider.MethodSource"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.params.provider.Arguments"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Disabled"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.function.BiFunction"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Disabled"/>
+    <fullyQualifiedTypeName name="java.util.ArrayDeque"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 </qualifiedTypeNameHistroy>
