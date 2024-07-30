@@ -42,5 +42,4 @@ INDEX VERSION 1.134+/Users/aungthureintun/Documents/Devs/onestop-online/workspac
 2806824771.index
 2309171515.index
 3521081487.index
-2768154064.index
 112840172.index

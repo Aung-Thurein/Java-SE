@@ -9,9 +9,14 @@ public record Sale(
 		String product,
 		int UnitPrice,
 		int Quantity,
-		LocalDateTime SateAts) {
+		LocalDateTime SateAt)implements Comparable<Sale>{
 
 	static final DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+	@Override
+	public int compareTo(Sale o) {
+
+		return id - o.id;
+	}
 	
 	public int getTotal()
 	{

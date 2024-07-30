@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeSet;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -14,7 +15,7 @@ import org.junit.jupiter.api.Test;
 
 import com.jdc.stream.domain.Sale;
 
-public class CollectingElements {
+public class CollectionAsCollection {
 
 	@Test
 	void test_to_list()
@@ -61,6 +62,25 @@ public class CollectingElements {
 		} catch (IOException e) {
 
 		}
+	}
+	
+	
+	@Test
+	void test_to_collection()
+	{
+		try (Stream<String> stream = Files.lines(Path.of("data","sales.txt"))){
+			
+			
+		var result = stream.map(line -> line.split("\t"))
+				.map(Sale::From)
+				.collect(Collectors.toCollection(() -> new TreeSet<>()));
+		
+		
+		System.out.println(result);
+		} catch (IOException e) {
+
+		}
+		
 	}
 	
 }
